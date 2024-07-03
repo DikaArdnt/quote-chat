@@ -209,10 +209,10 @@ module.exports = async (parm) => {
     canvasPicCtx.shadowColor = 'rgba(0, 0, 0, 0)'
 
     // write text button right
-    canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.3)`
-    canvasPicCtx.font = `${8 * parm.scale}px Noto Sans`
-    canvasPicCtx.textAlign = 'right'
-    canvasPicCtx.fillText('@QuotLyBot', canvasPic.width - 25, canvasPic.height - 25)
+    // canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.3)`
+    // canvasPicCtx.font = `${8 * parm.scale}px Noto Sans`
+    // canvasPicCtx.textAlign = 'right'
+    // canvasPicCtx.fillText('@QuotLyBot', canvasPic.width - 25, canvasPic.height - 25)
 
     quoteImage = await sharp(canvasPic.toBuffer()).png({ lossless: true, force: true }).toBuffer()
   } else if (type === 'stories') {
@@ -279,12 +279,12 @@ module.exports = async (parm) => {
     canvasPicCtx.shadowBlur = 0
 
     // write text vertical left center text
-    canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.4)`
-    canvasPicCtx.font = `${16 * parm.scale}px Noto Sans`
-    canvasPicCtx.textAlign = 'center'
-    canvasPicCtx.translate(70, canvasPic.height / 2)
-    canvasPicCtx.rotate(-Math.PI / 2)
-    canvasPicCtx.fillText('@QuotLyBot', 0, 0)
+    // canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.4)`
+    // canvasPicCtx.font = `${16 * parm.scale}px Noto Sans`
+    // canvasPicCtx.textAlign = 'center'
+    // canvasPicCtx.translate(70, canvasPic.height / 2)
+    // canvasPicCtx.rotate(-Math.PI / 2)
+    // canvasPicCtx.fillText('@QuotLyBot', 0, 0)
 
     quoteImage = await sharp(canvasPic.toBuffer()).png({ lossless: true, force: true }).toBuffer()
   } else {
